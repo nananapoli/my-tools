@@ -1,0 +1,9 @@
+.link-list-wrapper a {
+	display: block;
+	color: #262626;
+	width: fit-content;
+}
+
+.link-list-wrapper a:visited {
+	opacity: 0.3;
+}

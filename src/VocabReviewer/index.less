@@ -1,0 +1,97 @@
+.vocab-reviewer {
+  position: relative;
+  padding: 30px 20px;
+
+  .vocab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .vocab-card {
+      width: 300px;
+      height: 180px;
+      line-height: 180px;
+      text-align: center;
+      background-color: rgba(128, 128, 128,0.7);
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: 20px;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: rgba(128, 128, 128,1);
+      }
+    }
+  }
+
+  .refresh-btn {
+    cursor: pointer;
+    width: 60vw;
+    height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 50px;
+    margin: 0 auto;
+    background-color: greenyellow;
+    border-radius: 4px;
+  }
+
+  .vocab-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    .inner-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75%;
+      height: 75%;
+      background-color: seashell;
+      border-radius: 5px;
+      padding: 20px;
+      overflow-y: scroll;
+
+      .vocab {
+        font-size: 25px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+
+      .meaning {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .note {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:450px){
+  .vocab-reviewer {
+    padding: 30px 10px;
+    
+    .vocab-list {
+
+      .vocab-card {
+        width: 170px;
+        height: 140px;
+        line-height: 140px;
+        font-size: 24px;
+      }
+    }
+  }
+ }
