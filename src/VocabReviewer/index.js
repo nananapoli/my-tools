@@ -7,7 +7,6 @@ import './index.less';
 /*
   todo:
     - 增加react-route，做成SPA
-    - 发布到github，支持远端查看
     - 简化更新流程
 */
 
