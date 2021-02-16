@@ -3,8 +3,9 @@ import {Route, BrowserRouter as Router, Link} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-import Linklist from './Linklist';
-import VocabReviewer from './VocabReviewer';
+import Linklist from './components/Linklist';
+import VocabReviewer from './components/VocabReviewer';
+import AudioList from './components/AudioList';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       </header> */}
       {/* <Linklist /> */}
       <VocabReviewer />
+      {/* <AudioList /> */}
     </div>
   );
 }
