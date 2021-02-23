@@ -61,6 +61,7 @@ class VocabReviewer extends Component {
     const { vocabArr } = this.state;
     return (
       <div className="vocab-reviewer">
+        <div className="total-count">{data.length}</div>
         <div className="vocab-list">
           {
             vocabArr.map((item, index) => {
