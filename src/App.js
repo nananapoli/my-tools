@@ -6,6 +6,7 @@ import './App.css';
 import Linklist from './components/Linklist';
 import VocabReviewer from './components/VocabReviewer';
 import AudioList from './components/AudioList';
+import Editor from './components/Editor';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       {/* <Linklist /> */}
       <VocabReviewer />
       {/* <AudioList /> */}
+      {/* <Editor /> */}
     </div>
   );
 }

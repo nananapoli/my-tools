@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-import data from './data';
+import data from './data/notes';
+import tem8_1 from './data/tem8-1';
+import tem8_2 from './data/tem8-2';
+import tem8_3 from './data/tem8-3';
+import tem8_4 from './data/tem8-4';
 
 import './index.less';
 
@@ -19,6 +23,24 @@ class VocabReviewer extends Component {
 
   componentDidMount() {
     this.getRandomVocabShuffle();
+    const result = this.operateData();
+    console.log(result)
+  }
+
+  simplifyArr = arr => {
+    return arr.map(item => item.vocab);
+  }
+
+  operateData = () => {
+    const noteArr = this.simplifyArr(data);
+    const tem8_1Arr = this.simplifyArr(tem8_3);
+    const repeatArr = []
+    tem8_1Arr.forEach((item, index) => {
+      if (noteArr.find(e => e === item)) {
+        repeatArr.push(item);
+      }
+    })
+    return repeatArr;
   }
 
   getRandomVocabShuffle = () => {
@@ -42,7 +64,7 @@ class VocabReviewer extends Component {
     const { selectedVocab, modalVisible } = this.state;
     if (!modalVisible) return null;
     
-    let { vocab, meaning, note } = selectedVocab;
+    let { vocab, meaning,  note = '' } = selectedVocab;
     note = note.replace(new RegExp('\n','g'), '<br/>')
     note = note.replace(new RegExp(vocab,'ig'), `<b>${vocab}</b>`)
     
