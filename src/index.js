@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Router, Route, Link } from 'react-router';
-// import {IndexRoute} from 'react-router';
-import {Route, BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
-// import VocabReviewer from './VocabReviewer';
 import reportWebVitals from './reportWebVitals';
 
-
-
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
-  // <Router>
-  //   <Route path="/" component={App} >
-  //     <Route path="/vocab-reviewer" component={VocabReviewer} />
-  //   </Route>
-  //   {/* <Route path="/vocab-reviewer" component={VocabReviewer} /> */}
-  // </Router>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

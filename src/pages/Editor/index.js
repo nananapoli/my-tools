@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 
 import './style.less'
-
 class Editor extends Component {
+
+  state = {
+    surfix: '666',
+  }
 
   componentDidMount = () => {
     document.addEventListener('copy', (e) => {
+      let { surfix } = this.state;
       const selection = document.getSelection();
-      const surfix = `  
+      surfix = `
       
-「Why your brain needs exercise -- Scientific American 2020-01」`;
+--  ${surfix}`
       e.clipboardData.setData('text/plain', selection.toString() + surfix);
       e.preventDefault();
     })
@@ -17,8 +21,16 @@ class Editor extends Component {
 
   render() {
     return (
-      <div id="editor" contentEditable> 
-
+      <div className="editor-wrapper">
+        <input 
+          onChange={(e) => {
+            const value = e.target.value;
+            this.setState({
+              surfix: value
+            })
+          }}
+        />
+        <textarea />
       </div>
     );
   }
