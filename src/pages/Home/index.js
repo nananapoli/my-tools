@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 
 import './style.less';
 
@@ -8,11 +8,10 @@ class Home extends Component {
   render() {
     return (
       <div className="home-wrapper">
-        <Helmet>
+        {/* <Helmet>
           <link rel="shortcut icon" href="https://s2.ax1x.com/2019/07/17/ZqRakQ.png"></link>
           <title>napoli's box</title>
-          
-        </Helmet>
+        </Helmet> */}
         <h1>Tool List</h1>
         <nav>
           <Link to="link-list">link-list</Link>
